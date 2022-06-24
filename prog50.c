@@ -1,0 +1,48 @@
+/*input:row=3  column=3
+  output:   * * * 
+            # # #
+            * * * 
+    
+                                 */
+         
+
+#include<stdio.h>
+void Display(int iRow,int icolumn)
+{
+     int iCnt1=0,iCnt2=0;
+   
+    for(iCnt1=1; iCnt1<=iRow; iCnt1++)
+    { 
+     
+              if((iCnt1%2)==0)
+              {
+                  for(iCnt2=1; iCnt2<=icolumn; iCnt2++)
+                   {
+                    printf("*\t");
+                   }
+              }
+              else
+              {
+                  for(iCnt2=1; iCnt2<=icolumn; iCnt2++)
+                   {
+                    printf("#\t");
+                   }
+              
+              }        
+       printf("\n");
+    }
+}
+
+int main()
+{
+  int iValue1=0,iValue2=0;
+  printf("Enter the row ");
+  scanf("%d",&iValue1);
+
+   printf("Enter the column ");
+   scanf("%d",&iValue2);
+
+   Display(iValue1,iValue2);
+
+   return 0;
+}
